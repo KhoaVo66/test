@@ -23,7 +23,7 @@ function Profile() {
       setEmail(result.data.email)
       setAddress(result.data.address)
     });
-  },);
+  },[]);
   const Update = (e) => {
     e.preventDefault();
     axios
