@@ -1,7 +1,7 @@
 import PaginationComponent from "../../script_handle/index_scripts/whishlist_pagechange";
 import { useEffect, useState } from "react";
 import axios from 'axios';
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 export default function Consoles() {
     const [products, setProducts] = useState([]);
