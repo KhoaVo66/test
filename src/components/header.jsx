@@ -15,10 +15,11 @@ export default function Header() {
     const [user, setUser] = useState(false)
     const [id , setId] = useState()
     const [isAdmin, setAdmin] = useState(false)
+    console.log(isAdmin)
     
     useEffect(()=>{
         const token = JSON.parse(localStorage.getItem("token"));
-        axios.get('http://localhost:3001/user/' + token)
+        axios.get('https://web-shopping.onrender.com/user/' + token)
         .then(result => {
             console.log(result.data)
             setId(result.data.id)
