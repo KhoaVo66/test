@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Contact() {
     return (
         <div className="container">
@@ -5,7 +7,7 @@ export default function Contact() {
                 <div className="contact-nav">
                     <div className="contact-title">
                         <div className="contact-fix">
-                            <a href="/home">Home</a>
+                            <Link to="/home">Home</Link>
                             &nbsp;/&nbsp;
                             <p>Contact</p>
                         </div>

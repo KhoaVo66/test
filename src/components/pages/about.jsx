@@ -3,6 +3,7 @@ import storyImage from "../../assets/image/story.png"
 import deliveryImg from "../../assets/image/icon-delivery.png"
 import customImg from "../../assets/image/Icon-customer_service.png"
 import secureImg from "../../assets/image/Icon-secure.png"
+import { Link } from "react-router-dom"
 export default function AboutUs() {
     return (
         <div className="container">
@@ -10,7 +11,7 @@ export default function AboutUs() {
                 <div className="contact-nav">
                     <div className="contact-title">
                         <div className="contact-fix">
-                            <a href="/home">Home</a>
+                            <Link to="/home">Home</Link>
                             &nbsp;/&nbsp;
                             <p>About</p>
                         </div>

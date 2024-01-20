@@ -1,6 +1,7 @@
 import PaginationComponent from "../../script_handle/index_scripts/whishlist_pagechange";
 import { useEffect, useState } from "react";
 import axios from 'axios';
+import { Link } from "react-router-dom";
 
 export default function TodaySalePage() {
     const [products, setProducts] = useState([]);
@@ -22,7 +23,7 @@ export default function TodaySalePage() {
                 <div className="wishlist-nav">
                     <div className="contact-title">
                         <div className="contact-fix">
-                            <a href="/home">Home</a>
+                            <Link to="/home">Home</Link>
                             &nbsp;/&nbsp;
                             <p>Day sale</p>
                         </div>
@@ -33,7 +34,7 @@ export default function TodaySalePage() {
                                 .filter(product => product.sale_type === "day")
                                 .map(product => (
                                     <div className="product-item" key={product._id}>
-                                        <a href={`/detail/${product._id}`}>
+                                        <Link to={`/detail/${product._id}`}>
                                             <div className="product-item__img">
                                                 <img src={product.product_image} alt="product-img" />
                                                 <button className="add-cart" type="button">
@@ -41,7 +42,7 @@ export default function TodaySalePage() {
                                                 </button>
                                             </div>
                                             <h4 className="product-name webkit-text">{product.product_name}</h4>
-                                        </a>
+                                        </Link>
                                         <div className="product-price">
                                             <span id="price-new">${product.price - product.price * product.sales / 100}</span>
                                             <span id="price-old">${product.price}</span>

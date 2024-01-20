@@ -1,7 +1,7 @@
 // import PaginationComponent from "../../script_handle/index_scripts/whishlist_pagechange";
 import { useEffect, useState } from "react";
 import axios from 'axios';
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Printers() {
     const [products, setProducts] = useState([]);
@@ -92,7 +92,7 @@ export default function Printers() {
                 <div className="wishlist-nav-1" style={{ marginLeft: "10px" }}>
                     <div className="contact-title">
                         <div className="contact-fix">
-                            <a href="/home">Home</a>
+                            <Link href="/home">Home</Link>
                             &nbsp;/&nbsp;
                             <p>Printers and Scanners</p>
                         </div>
@@ -103,7 +103,7 @@ export default function Printers() {
                                 .filter(product => product.type === "printers")
                                 .map(product => (
                                     <div className="product-item" key={product.id}>
-                                        <a href={`/detail/${product._id}`}>
+                                        <Link to={`/detail/${product._id}`}>
                                             <div className="product-item__img">
                                                 <img src={product.product_image} alt="product-img" />
                                                 <button className="add-cart" type="button">
@@ -111,7 +111,7 @@ export default function Printers() {
                                                 </button>
                                             </div>
                                             <h4 className="product-name webkit-text">{product.product_name}</h4>
-                                        </a>
+                                        </Link>
                                         <div className="product-price">
                                             {product.sale_type === "no" ? (
                                                 <>

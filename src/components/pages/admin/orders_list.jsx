@@ -7,7 +7,7 @@ const OrdersList = () => {
         <div className="wishlist-nav">
           <div className="contact-title">
             <div className="contact-fix">
-              <a href="/admin">Home</a>
+              <Link to="/admin">Home</Link>
               &nbsp;/&nbsp;
               <p>Oders List</p>
             </div>

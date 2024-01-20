@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Admin() {
     return (
         <div className="container" style={{marginBottom:"29px", marginTop:"10px"}}>
@@ -6,7 +8,7 @@ export default function Admin() {
                 <div style={{ margin: 20 }}>
                     <div style={{ display: "flex", justifyContent: "space-between" }}>
                         <div className="col-md-3 admin_card_hover" style={{ width: "23%" }}>
-                            <a href="/add_product" style={{ color: "black" }}>
+                            <Link to="/add_product" style={{ color: "black" }}>
                                 <div
                                     style={{
                                         border: "1px solid #ccc",
@@ -20,10 +22,10 @@ export default function Admin() {
                                     <h4>Add Product</h4>
                                     --------
                                 </div>
-                            </a>
+                            </Link>
                         </div>
                         <div className="col-md-3 admin_card_hover" style={{ width: "23%" }}>
-                            <a href="/all_products" style={{ color: "black" }}>
+                            <Link to="/all_products" style={{ color: "black" }}>
                                 <div
                                     style={{
                                         border: "1px solid #ccc",
@@ -37,10 +39,10 @@ export default function Admin() {
                                     <h4>All Products</h4>
                                     --------
                                 </div>
-                            </a>
+                            </Link>
                         </div>
                         <div className="col-md-3 admin_card_hover" style={{ width: "23%" }}>
-                            <a href="/oders_list" style={{ color: "black" }}>
+                            <Link to="/oders_list" style={{ color: "black" }}>
                                 <div
                                     style={{
                                         border: "1px solid #ccc",
@@ -54,10 +56,10 @@ export default function Admin() {
                                     <h4>Oder List</h4>
                                     --------
                                 </div>
-                            </a>
+                            </Link>
                         </div>
                         <div className="col-md-3 admin_card_hover" style={{ width: "23%"}}>
-                            <a href="/message" style={{ color: "black" }}>
+                            <Link to="/message" style={{ color: "black" }}>
                                 <div
                                     style={{
                                         border: "1px solid #ccc",
@@ -71,7 +73,7 @@ export default function Admin() {
                                     <h4>Messages</h4>
                                     --------
                                 </div>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

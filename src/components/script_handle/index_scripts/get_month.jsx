@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -23,7 +24,7 @@ const ProductList = () => {
     if (product.sale_type === "month") {
       const productItem = (
         <div key={product.id} className="product-item">
-          <a href={`/detail/${product._id}`}>
+          <Link to={`/detail/${product._id}`}>
             <div className="product-item__img">
               <img src={product.product_image} alt="product-img" />
               <button className="add-cart" type="button">
@@ -31,7 +32,7 @@ const ProductList = () => {
               </button>
             </div>
             <h4 className="product-name webkit-text">{product.product_name}</h4>
-          </a>
+          </Link>
           <div className="product-price">
             <span id="price-new">${product.price - (product.price * product.sales / 100)}</span>
             <span id="price-old">${product.price}</span>

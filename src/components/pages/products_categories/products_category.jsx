@@ -1,7 +1,7 @@
 import PaginationComponent from "../../script_handle/index_scripts/whishlist_pagechange";
 import { useEffect, useState } from "react";
 import axios from 'axios';
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function ProductCate() {
     const [products, setProducts] = useState([]);
@@ -91,7 +91,7 @@ export default function ProductCate() {
                 <div className="wishlist-nav-1" style={{ marginLeft: "10px" }}>
                     <div className="contact-title">
                         <div className="contact-fix">
-                            <a href="/home">Home</a>
+                            <Link to="/home">Home</Link>
                             &nbsp;/&nbsp;
                             <p>All Products</p>
                         </div>
@@ -100,7 +100,7 @@ export default function ProductCate() {
                         <div className="wishlist-list">
                             {currentProducts.map(products => (
                                 <div className="product-item" key={products._id}>
-                                    <a href={`/detail/${products._id}`}>
+                                    <Link to={`/detail/${products._id}`}>
                                         <div className="product-item__img">
                                             <img src={products.product_image} alt="product-img" />
                                             <button className="add-cart" type="button">
@@ -108,7 +108,7 @@ export default function ProductCate() {
                                             </button>
                                         </div>
                                         <h4 className="product-name webkit-text">{products.product_name}</h4>
-                                    </a>
+                                    </Link>
                                     <div className="product-price">
                                         {products.sale_type === "no" ? (
                                             <>

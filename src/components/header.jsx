@@ -94,14 +94,14 @@ export default function Header() {
                         <span>
                             Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
                         </span>
-                        <a href="/home">ShopNow</a>
+                        <Link to="/home">ShopNow</Link>
                     </p>
                 </div>
                 <div className="container">
                     <div className="navbar">
-                        <a href="/home" className="logo">
+                        <Link to="/home" className="logo">
                             Exclusive
-                        </a>
+                        </Link>
                         <div className="sidebar">
                             <NavLink
                                 to="/home"
@@ -160,12 +160,12 @@ export default function Header() {
                                                 </div>
                                                 <div className="search-list">
                                                     {searchResults.map(result => (
-                                                        <a href={`/detail/${result._id}`} key={result.id}>
+                                                        <Link to={`/detail/${result._id}`} key={result.id}>
                                                             <div className="search-item">
                                                                 <i className='bx bx-search icon-search'></i>
                                                                 <span>{result.product_name}</span>
                                                             </div>
-                                                        </a>
+                                                        </Link>
                                                     ))}
                                                 </div>
                                             </>
@@ -185,22 +185,22 @@ export default function Header() {
                                     </div>
                                 )}
                             </div>
-                            <a href="/wishlist">
+                            <Link to="/wishlist">
                                 <div className="tools-item" style={{display: user ? "" : "none"}}>
                                     <i className="bx bx-heart" />
                                     <span className="number-icon" id="heart-number">
                                         0
                                     </span>
                                 </div>
-                            </a>
-                            <a href="/cart" style={{display: user ? "" : "none"}}>
+                            </Link>
+                            <Link to="/cart" style={{display: user ? "" : "none"}}>
                                 <div className="tools-item">
                                     <i className="bx bx-cart-alt" />
                                     <span className="number-icon" id="cart-number">
                                         0
                                     </span>
                                 </div>
-                            </a>
+                            </Link>
                             <div
                                 class="tools-item account"
                                 id="account" onClick={handleAccountButtonClick} ref={accountButtonRef}

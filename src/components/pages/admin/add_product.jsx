@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function AddProduct() {
   const navigate = useNavigate()
@@ -72,7 +72,7 @@ export default function AddProduct() {
       <div className="wrapper">
         <div className="contact-title">
           <div className="contact-fix">
-            <a href="/admin">Home</a>
+            <Link to="/admin">Home</Link>
             &nbsp;/&nbsp;
             <p>Add product</p>
           </div>

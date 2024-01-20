@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import bank from "../../assets/image/bank.png"
 export default function CheckOut() {
     return (
@@ -6,9 +7,9 @@ export default function CheckOut() {
                 <div className="contact-nav">
                     <div className="contact-title">
                         <div className="contact-fix">
-                            <a href="/home">Home</a>
+                            <Link to="/home">Home</Link>
                             &nbsp;/&nbsp;
-                            <a href="/cart">Cart</a>
+                            <Link to="/cart">Cart</Link>
                             &nbsp;/&nbsp;
                             <p>CheckOut</p>
                         </div>

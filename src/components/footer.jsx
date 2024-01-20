@@ -1,13 +1,14 @@
 import frameImg from '../assets/image/frame.png'
+import { Link } from 'react-router-dom';
 export default function Footer() {
   return (
     <>
       <footer>
         <section className="container footer-top">
           <div className="footer-top__item">
-            <a href="./index.html" className="logo">
+            <Link to="./index.html" className="logo">
               Exclusive
-            </a>
+            </Link>
             <p>Get 10% off your first order</p>
             <div className="footer-submit">
               <input type="email" placeholder="Enter your email" />
@@ -22,34 +23,34 @@ export default function Footer() {
           </div>
           <div className="footer-top__item">
             <h3>Support</h3>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms Of Use</a>
-            <a href="#">FAQ</a>
-            <a href="#">Contact</a>
+            <Link to="#">Privacy Policy</Link>
+            <Link to="#">Terms Of Use</Link>
+            <Link to="#">FAQ</Link>
+            <Link to="#">Contact</Link>
           </div>
           <div className="footer-top__item">
             <h3>Download App</h3>
             <img src={frameImg} alt="" />
             <ul>
               <li>
-                <a href="#">
+                <Link to="#">
                   <i className="bx bxl-facebook-circle" />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#">
+                <Link to="#">
                   <i className="bx bxl-twitter" />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#">
+                <Link to="#">
                   <i className="bx bxl-instagram" />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#">
+                <Link to="#">
                   <i className="bx bxl-linkedin" />
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

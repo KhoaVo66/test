@@ -91,7 +91,7 @@ export default function Consoles() {
                 <div className="wishlist-nav-1" style={{ marginLeft: "10px" }}>
                     <div className="contact-title">
                         <div className="contact-fix">
-                            <a href="/home">Home</a>
+                            <Link to="/home">Home</Link>
                             &nbsp;/&nbsp;
                             <p>Game consoles</p>
                         </div>
@@ -102,7 +102,7 @@ export default function Consoles() {
                                 .filter(product => product.type === "consoles")
                                 .map(product => (
                                     <div className="product-item" key={product.id}>
-                                        <a href={`/detail/${product._id}`}>
+                                        <Link to={`/detail/${product._id}`}>
                                             <div className="product-item__img">
                                                 <img src={product.product_image} alt="product-img" />
                                                 <button className="add-cart" type="button">
@@ -110,7 +110,7 @@ export default function Consoles() {
                                                 </button>
                                             </div>
                                             <h4 className="product-name webkit-text">{product.product_name}</h4>
-                                        </a>
+                                        </Link>
                                         <div className="product-price">
                                             {product.sale_type === "no" ? (
                                                 <>

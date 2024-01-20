@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import 'swiper/css';
 import TodaysProducts from './get_products';
 import CountdownBannerTimer from './banner_time';
+import { Link } from 'react-router-dom';
 
 const ToDaySlide = () => {
   useEffect(() => {
@@ -41,7 +42,7 @@ const ToDaySlide = () => {
         </div>
       </div>
       <div className="section-button">
-        <a href='/day_sale'><button>View All Products</button></a>
+        <Link to='/day_sale'><button>View All Products</button></Link>
       </div>
     </section>
   );

@@ -1,5 +1,6 @@
 // import PaginationComponent from "../script_handle/index_scripts/whishlist_pagechange";
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function WishList() {
     const [wishNumber, setWishNumber] = useState(0);
@@ -14,7 +15,7 @@ export default function WishList() {
                 <div className="wishlist-nav">
                     <div className="contact-title">
                         <div className="contact-fix">
-                            <a href="/home">Home</a>
+                            <Link to="/home">Home</Link>
                             &nbsp;/&nbsp;
                             <p>Wishlist</p>
                         </div>
@@ -22,7 +23,7 @@ export default function WishList() {
                     <div className="wishlist-wrap">
                         <div className="wishlist-list">
                             <div className="product-item">
-                                <a href="#">
+                                <Link to="#">
                                     <div className="product-item__img">
                                         <img src="./assets/images/product-1a.png" alt="product-img" />
                                         <button className="add-cart" type="button">
@@ -30,7 +31,7 @@ export default function WishList() {
                                         </button>
                                     </div>
                                     <h4 className="product-name webkit-text">HAVIT HV-G92 Gamepad</h4>
-                                </a>
+                                </Link>
                                 <div className="product-price">
                                     <span id="price-new">$120</span>
                                     <span id="price-old">$160</span>
@@ -47,7 +48,7 @@ export default function WishList() {
                                 </div>
                             </div>
                             <div className="product-item">
-                                <a href="#">
+                                <Link to="#">
                                     <div className="product-item__img">
                                         <img src="./assets/images/product-1a.png" alt="product-img" />
                                         <button className="add-cart" type="button">
@@ -55,7 +56,7 @@ export default function WishList() {
                                         </button>
                                     </div>
                                     <h4 className="product-name webkit-text">HAVIT HV-G92 Gamepad</h4>
-                                </a>
+                                </Link>
                                 <div className="product-price">
                                     <span id="price-new">$120</span>
                                     <span id="price-old">$160</span>
@@ -72,7 +73,7 @@ export default function WishList() {
                                 </div>
                             </div>
                             <div className="product-item">
-                                <a href="#">
+                                <Link to="#">
                                     <div className="product-item__img">
                                         <img src="./assets/images/product-1a.png" alt="product-img" />
                                         <button className="add-cart" type="button">
@@ -80,7 +81,7 @@ export default function WishList() {
                                         </button>
                                     </div>
                                     <h4 className="product-name webkit-text">HAVIT HV-G92 Gamepad</h4>
-                                </a>
+                                </Link>
                                 <div className="product-price">
                                     <span id="price-new">$120</span>
                                     <span id="price-old">$160</span>
@@ -97,7 +98,7 @@ export default function WishList() {
                                 </div>
                             </div>
                             <div className="product-item">
-                                <a href="#">
+                                <Link to="#">
                                     <div className="product-item__img">
                                         <img src="./assets/images/product-1a.png" alt="product-img" />
                                         <button className="add-cart" type="button">
@@ -105,7 +106,7 @@ export default function WishList() {
                                         </button>
                                     </div>
                                     <h4 className="product-name webkit-text">HAVIT HV-G92 Gamepad</h4>
-                                </a>
+                                </Link>
                                 <div className="product-price">
                                     <span id="price-new">$120</span>
                                     <span id="price-old">$160</span>
@@ -122,7 +123,7 @@ export default function WishList() {
                                 </div>
                             </div>
                             <div className="product-item">
-                                <a href="#">
+                                <Link to="#">
                                     <div className="product-item__img">
                                         <img src="./assets/images/product-1a.png" alt="product-img" />
                                         <button className="add-cart" type="button">
@@ -130,7 +131,7 @@ export default function WishList() {
                                         </button>
                                     </div>
                                     <h4 className="product-name webkit-text">HAVIT HV-G92 Gamepad</h4>
-                                </a>
+                                </Link>
                                 <div className="product-price">
                                     <span id="price-new">$120</span>
                                     <span id="price-old">$160</span>
@@ -147,7 +148,7 @@ export default function WishList() {
                                 </div>
                             </div>
                             <div className="product-item">
-                                <a href="#">
+                                <Link to="#">
                                     <div className="product-item__img">
                                         <img src="./assets/images/product-1a.png" alt="product-img" />
                                         <button className="add-cart" type="button">
@@ -155,7 +156,7 @@ export default function WishList() {
                                         </button>
                                     </div>
                                     <h4 className="product-name webkit-text">HAVIT HV-G92 Gamepad</h4>
-                                </a>
+                                </Link>
                                 <div className="product-price">
                                     <span id="price-new">$120</span>
                                     <span id="price-old">$160</span>
@@ -172,7 +173,7 @@ export default function WishList() {
                                 </div>
                             </div>
                             <div className="product-item">
-                                <a href="#">
+                                <Link to="#">
                                     <div className="product-item__img">
                                         <img src="./assets/images/product-1a.png" alt="product-img" />
                                         <button className="add-cart" type="button">
@@ -180,7 +181,7 @@ export default function WishList() {
                                         </button>
                                     </div>
                                     <h4 className="product-name webkit-text">HAVIT HV-G92 Gamepad</h4>
-                                </a>
+                                </Link>
                                 <div className="product-price">
                                     <span id="price-new">$120</span>
                                     <span id="price-old">$160</span>
@@ -197,7 +198,7 @@ export default function WishList() {
                                 </div>
                             </div>
                             <div className="product-item">
-                                <a href="#">
+                                <Link to="#">
                                     <div className="product-item__img">
                                         <img src="./assets/images/product-1a.png" alt="product-img" />
                                         <button className="add-cart" type="button">
@@ -205,7 +206,7 @@ export default function WishList() {
                                         </button>
                                     </div>
                                     <h4 className="product-name webkit-text">HAVIT HV-G92 Gamepad</h4>
-                                </a>
+                                </Link>
                                 <div className="product-price">
                                     <span id="price-new">$120</span>
                                     <span id="price-old">$160</span>

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Cart() {
     return (
         <div className="container">
@@ -5,7 +7,7 @@ export default function Cart() {
                 <div className="wishlist-nav">
                     <div className="contact-title">
                         <div className="contact-fix">
-                            <a href="/home">Home</a>
+                            <Link to="/home">Home</Link>
                             &nbsp;/&nbsp;
                             <p>Cart</p>
                         </div>
@@ -34,11 +36,11 @@ export default function Cart() {
                                     </td>
                                     <td className="cart-text">$160</td>
                                     <td>
-                                        <a href="#">
+                                        <Link to="#">
                                             <button>
                                                 <i className="bi bi-trash3" />
                                             </button>
-                                        </a>
+                                        </Link>
                                     </td>
                                 </tr>
                                 <tr>
@@ -52,11 +54,11 @@ export default function Cart() {
                                     </td>
                                     <td className="cart-text">$160</td>
                                     <td>
-                                        <a href="#">
+                                        <Link to="#">
                                             <button>
                                                 <i className="bi bi-trash3" />
                                             </button>
-                                        </a>
+                                        </Link>
                                     </td>
                                 </tr>
                             </tbody>
@@ -87,13 +89,13 @@ export default function Cart() {
                             <div className="cart-footer">
                                 <p>
                                 Pressing 'Place Order' implies that you agree to comply with {" "}
-                                    <a>Exclusive's Terms and Conditions.</a>
+                                    <Link>Exclusive's Terms and Conditions.</Link>
                                 </p>
-                                <a href="/checkout">
+                                <Link to="/checkout">
                                     <button className="order-cart" type="button">
                                         Proceed to payment
                                     </button>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
