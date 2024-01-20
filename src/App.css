@@ -1122,11 +1122,11 @@ header {
     display: none;
 }
 
-.md-image.show {
+.md-images.show {
     display: block;
 }
 
-.image-wrap {
+.images-wrap {
     width: 40%;
     height: 60%;
     background: var(--bg-body);

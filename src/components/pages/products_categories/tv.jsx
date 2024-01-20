@@ -1,11 +1,12 @@
-import PaginationComponent from "../../script_handle/index_scripts/whishlist_pagechange";
+// import PaginationComponent from "../../script_handle/index_scripts/whishlist_pagechange";
 import { useEffect, useState } from "react";
 import axios from 'axios';
 import { Link, NavLink } from "react-router-dom";
 
 export default function TV() {
     const [products, setProducts] = useState([]);
-    const [currentPage, setCurrentPage] = useState(1);
+    // const [currentPage, setCurrentPage] = useState(1);
+    const currentPage = 1; 
     const [productsPerPage] = useState(12);
 
     useEffect(() => {

@@ -206,13 +206,13 @@ class Home extends Component {
         </div>
         {/* end */}
         {/* md-image */}
-        <div className="md-image">
-          <div className="image-wrap">
-            <div className="image-title">
+        <div className="md-images">
+          <div className="images-wrap">
+            <div className="images-title">
               <h3>Lorem ipsum dolor sit amet.</h3>
-              <i className="bx bx-x close-image" />
+              <i className="bx bx-x close-images" />
             </div>
-            <img src="../assets/images/product-2a.png" alt="image" />
+            <img src="../assets/images/product-2a.png" alt="images" />
           </div>
         </div>
         {/* end */}
