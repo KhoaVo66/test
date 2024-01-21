@@ -19,7 +19,7 @@ export default function Login() {
           alert("Đăng nhập thành công");
           localStorage.setItem("token", JSON.stringify(result.data.token));
           console.log(JSON.parse(localStorage.getItem("token")).token)
-          navigate("/home");
+          navigate("/");
           window.location.reload()
         } else if (result.status === 201) {
           alert("Mật khẩu không đúng");
