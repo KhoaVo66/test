@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams} from "react-router-dom";
 import axios from "axios";
 function Profile() {
+  const {id} = useParams();
   const [edit, setEdit] = useState(false);
   const [firstName, setFirstName] = useState();
   const [lastName, setLastName] = useState();
