@@ -1,36 +1,35 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams} from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 function Profile() {
-  const {id} = useParams();
   const [edit, setEdit] = useState(false);
   const [firstName, setFirstName] = useState();
   const [lastName, setLastName] = useState();
   const [email, setEmail] = useState();
   const [address, setAddress] = useState();
   // const [avata, setAvata] = useState("");
-  const [currentpass, setCurrentPass] = useState('');
-  const [newpass, setNewPass] = useState('');
+  const [currentpass, setCurrentPass] = useState("");
+  const [newpass, setNewPass] = useState("");
+  const { id } = useParams();
 
   const check = () => {
     setEdit(!edit);
   };
+
   useEffect(() => {
-    const getUserInfo = () => {
-      return axios.get("https://web-shopping.onrender.com/getUser/" + id)
-        .then((result) => {
+    axios
+      .get("https://web-shopping.onrender.com/getUser/" + id)
+      .then((result) => {
         // console.log(result)
-        setFirstName(result.data.firstName)
-        setLastName(result.data.lastName)
-        setEmail(result.data.email)
-        setAddress(result.data.address)
+        setFirstName(result.data.firstName);
+        setLastName(result.data.lastName);
+        setEmail(result.data.email);
+        setAddress(result.data.address);
       })
-      .catch(err => {
-        console.log(err)
-      })
-    };
-    getUserInfo();
-  },[]);
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [id]);
   const Update = (e) => {
     e.preventDefault();
     axios
@@ -40,24 +39,22 @@ function Profile() {
         email,
         address,
         currentpass,
-        newpass
+        newpass,
       })
       .then((result) => {
         console.log(result);
-        if(result.status === 200){
+        if (result.status === 200) {
           window.location.reload();
-        }else if (result.status === 201){
-          alert("Đổi mật khẩu thành công")
-          window.location.reload()
-        }
-        else if (result.status === 202){
-          alert("Chưa nhập mật khẩu mới")
-        }
-        else if (result.status === 203){
-          alert("Mật khẩu hiện tại không đúng")
+        } else if (result.status === 201) {
+          alert("Đổi mật khẩu thành công");
+          window.location.reload();
+        } else if (result.status === 202) {
+          alert("Chưa nhập mật khẩu mới");
+        } else if (result.status === 203) {
+          alert("Mật khẩu hiện tại không đúng");
         }
       })
-      .catch((err)=> console.log(err));
+      .catch((err) => console.log(err));
   };
 
   return (
@@ -72,7 +69,9 @@ function Profile() {
               </div>
               <div className="contact-fix2">
                 <p>My Account</p>&#160;
-                <p style={{float: "right"}}>Wellcome {firstName + lastName}</p>
+                <p style={{ float: "right" }}>
+                  Wellcome {firstName + lastName}
+                </p>
               </div>
             </div>
           </div>
