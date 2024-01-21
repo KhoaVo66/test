@@ -44,10 +44,10 @@ function Profile() {
       .then((result) => {
         console.log(result);
         if (result.status === 200) {
-          window.location.reload();
+          window.location.replace(`/profile/${id}`);
         } else if (result.status === 201) {
           alert("Đổi mật khẩu thành công");
-          window.location.reload();
+          window.location.replace(`/profile/${id}`);
         } else if (result.status === 202) {
           alert("Chưa nhập mật khẩu mới");
         } else if (result.status === 203) {
@@ -162,7 +162,7 @@ function Profile() {
                       className="contact-button"
                       id="cancel-button"
                       type="button"
-                      onClick={() => window.location.reload()}
+                      onClick={() => window.location.replace(`/profile/${id}`)}
                     >
                       Cancel
                     </button>

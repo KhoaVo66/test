@@ -201,7 +201,7 @@ export default function EditProduct() {
             </label>
             <img src={image} alt="" style={{ width: "100px" }} />
             <input
-              accept="Downloads/*"
+              accept=".png, .ipg, .jpeg"
               type="file"
               style={{ width: "100%", padding: 8, boxSizing: "border-box" }}
               onChange={onInputChange}
