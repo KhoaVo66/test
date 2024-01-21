@@ -24,6 +24,7 @@ export default function AddProduct() {
       })
       .then((result) => {
         console.log(result);
+        alert('Add Product Successfully')
         window.location.replace('/admin')
       })
       .catch((err) => console.log(err));
@@ -212,11 +213,6 @@ export default function AddProduct() {
               accept="Downloads/*"
             />
           </div>
-          {successMessage && (
-            <div style={{ color: "green", marginTop: 10, textAlign:"center" }}>
-              {successMessage}
-            </div>
-          )}
           <div>
             <button
               type="submit"
