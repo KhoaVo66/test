@@ -23,8 +23,6 @@ export default function Login() {
           window.location.reload()
         } else if (result.status === 201) {
           alert("Mật khẩu không đúng");
-          navigate('/home')
-          window.location.reload()
         }
       })
       .catch(() => alert("Email không đúng"));
