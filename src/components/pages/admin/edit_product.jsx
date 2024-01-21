@@ -31,7 +31,7 @@ export default function EditProduct() {
         setStock(result.data.stock_number);
       })
       .catch((err) => console.log(err));
-  },);
+  },[id]);
 
   const Submit = (e) => {
     e.preventDefault();
