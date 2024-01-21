@@ -35,16 +35,17 @@ export default function EditProduct() {
 
   const Submit = (e) => {
     e.preventDefault();
-    console.log(promotionType)
+    // console.log(promotionType)
     axios
       .put("https://web-shopping.onrender.com/products/" + id, {
         productName, image, productType, description, price, sales, promotionType, storageAddress, stock
       })
       .then((result) => {
         console.log(result);
-        navigate('/all_products')
+        window.location.replace('/all_products')
       })
       .catch((err) => console.log(err));
+    
   };
 
   const onInputChange = (e) => {

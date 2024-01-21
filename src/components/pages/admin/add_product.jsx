@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function AddProduct() {
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
   const [productName, setProductName] = useState();
   const [image, setImage] = useState();
   const [productType, setProductType] = useState();
@@ -17,35 +17,14 @@ export default function AddProduct() {
 
   const Submit = (e) => {
     e.preventDefault();
+    console.log({productType, stock, storageAddress})
     axios
       .post("https://web-shopping.onrender.com/products/create", {
-        productName,
-        image,
-        productType,
-        description,
-        price,
-        sales,
-        promotionType,
-        storageAddress,
-        stock,
+        productName, image, productType, description, price, sales, promotionType, storageAddress, stock
       })
       .then((result) => {
         console.log(result);
-        setSuccessMessage("Product added successfully!");
-        // Reset form fields and success message after a delay
-        setTimeout(() => {
-          setProductName("");
-          setImage("");
-          setProductType("");
-          setDescription("");
-          setPrice("");
-          setSales("");
-          setPromotionType("");
-          setStorageAddress("");
-          setStock("");
-          setSuccessMessage("");
-        }, 5000);
-        navigate('/admin')
+        window.location.replace('/admin')
       })
       .catch((err) => console.log(err));
   };
