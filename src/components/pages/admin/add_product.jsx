@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function AddProduct() {
   // const navigate = useNavigate()
@@ -13,7 +13,7 @@ export default function AddProduct() {
   const [promotionType, setPromotionType] = useState();
   const [storageAddress, setStorageAddress] = useState();
   const [stock, setStock] = useState();
-  const [successMessage, setSuccessMessage] = useState("");
+  // const [successMessage, setSuccessMessage] = useState("");
 
   const Submit = (e) => {
     e.preventDefault();
