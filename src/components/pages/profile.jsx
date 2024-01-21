@@ -16,15 +16,20 @@ function Profile() {
     setEdit(!edit);
   };
   useEffect(() => {
-    setTimeout(() => {
-      axios.get("https://web-shopping.onrender.com/getUser/" + id).then((result) => {
+    const getUserInfo = () => {
+      return axios.get("https://web-shopping.onrender.com/getUser/" + id)
+        .then((result) => {
         // console.log(result)
         setFirstName(result.data.firstName)
         setLastName(result.data.lastName)
         setEmail(result.data.email)
         setAddress(result.data.address)
-      });
-    }, 2000);
+      })
+      .catch(err => {
+        console.log(err)
+      })
+    };
+    getUserInfo();
   },[]);
   const Update = (e) => {
     e.preventDefault();
