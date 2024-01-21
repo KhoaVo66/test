@@ -2067,11 +2067,6 @@ header {
     text-align: right;
 }
 
-#cancel-button {
-    background: none;
-    color: var(--text-bland);
-    cursor: no-drop;
-}
 
 
 /*
@@ -3244,6 +3239,10 @@ footer {
     font-size: 1.8rem;
     color: var(--pink-color);
     margin-bottom: 1rem;
+}
+
+.contact-form-txt i:hover{
+    color: var(--pink-hover);
 }
 
 .account-group {
