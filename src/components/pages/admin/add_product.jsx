@@ -92,7 +92,7 @@ export default function AddProduct() {
               style={{ width: "100%", padding: 8, boxSizing: "border-box" }}
               onChange={(e) => setProductType(e.target.value)}
             >
-              <option selected>Chosse option</option>
+              <option selected disabled>Chosse option</option>
               <option value={"phones"}>Mobile phones</option>
               <option value={"laptops"}>Laptops and Tablets</option>
               <option value={"tv"}>Televisions and Monitors</option>
@@ -166,7 +166,7 @@ export default function AddProduct() {
               style={{ width: "100%", padding: 8, boxSizing: "border-box" }}
               onChange={(e) => setPromotionType(e.target.value)}
             >
-              <option selected>Chosse option</option>
+              <option selected disabled>Chosse option</option>
               <option value={"no"}>No</option>
               <option value={"day"}>Day</option>
               <option value={"month"}>Month</option>
