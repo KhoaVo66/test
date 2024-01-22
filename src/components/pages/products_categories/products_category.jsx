@@ -6,8 +6,8 @@ import { Link, NavLink } from "react-router-dom";
 export default function ProductCate() {
     const [products, setProducts] = useState([]);
     // const [currentPage, setCurrentPage] = useState(1);
-    const currentPage = 1; 
-    const [productsPerPage] = useState(12);
+    // const currentPage = 1; 
+    // const [productsPerPage] = useState(12);
 
     useEffect(() => {
         axios.get('https://web-shopping.onrender.com/products')
@@ -15,9 +15,9 @@ export default function ProductCate() {
             .catch(err => console.log(err))
     }, []);
 
-    const indexOfLastProduct = currentPage * productsPerPage;
-    const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-    const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
+    // const indexOfLastProduct = currentPage * productsPerPage;
+    // const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+    // const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
 
     return (
         <div className="container">
@@ -99,7 +99,7 @@ export default function ProductCate() {
                     </div>
                     <div className="wishlist-wrap">
                         <div className="wishlist-list">
-                            {currentProducts.map(products => (
+                            {products.map(products => (
                                 <div className="product-item" key={products._id}>
                                     <Link to={`/detail/${products._id}`}>
                                         <div className="product-item__img">

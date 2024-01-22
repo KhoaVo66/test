@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 export default function TodaySalePage() {
     const [products, setProducts] = useState([]);
     // const [currentPage, setCurrentPage] = useState(1);
-    const currentPage = 1; 
-    const [productsPerPage] = useState(12);
+    // const currentPage = 1; 
+    // const [productsPerPage] = useState(12);
 
     useEffect(() => {
         axios.get('https://web-shopping.onrender.com/products')
@@ -15,9 +15,9 @@ export default function TodaySalePage() {
             .catch(err => console.log(err))
     }, []);
 
-    const indexOfLastProduct = currentPage * productsPerPage;
-    const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-    const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
+    // const indexOfLastProduct = currentPage * productsPerPage;
+    // const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+    // const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
     return (
         <div className="container">
            <div className="wrapper" style={{ display: "flex" }}>
@@ -31,7 +31,7 @@ export default function TodaySalePage() {
                     </div>
                     <div className="wishlist-wrap">
                         <div className="wishlist-list">
-                            {currentProducts
+                            {products
                                 .filter(product => product.sale_type === "day")
                                 .map(product => (
                                     <div className="product-item" key={product._id}>

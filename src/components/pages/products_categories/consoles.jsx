@@ -6,8 +6,8 @@ import { NavLink, Link } from "react-router-dom";
 export default function Consoles() {
     const [products, setProducts] = useState([]);
     // const [currentPage, setCurrentPage] = useState(1);
-    const currentPage = 1; 
-    const [productsPerPage] = useState(12);
+    // const currentPage = 1; 
+    // const [productsPerPage] = useState(12);
 
     useEffect(() => {
         axios.get('https://web-shopping.onrender.com/products')
@@ -15,9 +15,9 @@ export default function Consoles() {
             .catch(err => console.log(err))
     }, []);
 
-    const indexOfLastProduct = currentPage * productsPerPage;
-    const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-    const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
+    // const indexOfLastProduct = currentPage * productsPerPage;
+    // const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+    // const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
 
     return (
         <div className="container">
@@ -99,7 +99,7 @@ export default function Consoles() {
                     </div>
                     <div className="wishlist-wrap">
                         <div className="wishlist-list">
-                            {currentProducts
+                            {products
                                 .filter(product => product.type === "consoles")
                                 .map(product => (
                                     <div className="product-item" key={product.id}>
