@@ -11,9 +11,12 @@ export default function Laptops() {
 
     useEffect(() => {
         axios.get('https://web-shopping.onrender.com/products')
-            .then(response => setProducts(response.data))
+            .then(response => {
+                setProducts(response.data);
+                console.log(response)
+            })
             .catch(err => console.log(err))
-    }, []);
+    }, [products]);
 
     const indexOfLastProduct = currentPage * productsPerPage;
     const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
