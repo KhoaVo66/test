@@ -22,6 +22,7 @@ export default function Register() {
       })
       .then((result) => {
         console.log(result);
+        alert('Đăng ký thành công');
         navigate("/login");
       })
       .catch((err) => console.log(err));
