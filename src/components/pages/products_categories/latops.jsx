@@ -6,8 +6,8 @@ import { Link, NavLink } from "react-router-dom";
 export default function Laptops() {
     const [products, setProducts] = useState([]);
     // const [currentPage, setCurrentPage] = useState(1);
-    const currentPage = 1; 
-    const [productsPerPage] = useState(12);
+    // const currentPage = 1; 
+    // const [productsPerPage] = useState(12);
 
     useEffect(() => {
         axios.get('https://web-shopping.onrender.com/products')
@@ -18,9 +18,9 @@ export default function Laptops() {
             .catch(err => console.log(err))
     }, [products]);
 
-    const indexOfLastProduct = currentPage * productsPerPage;
-    const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-    const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
+    // const indexOfLastProduct = currentPage * productsPerPage;
+    // const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+    // const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
 
     return (
         <div className="container">
