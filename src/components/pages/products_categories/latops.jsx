@@ -102,7 +102,7 @@ export default function Laptops() {
                     </div>
                     <div className="wishlist-wrap">
                         <div className="wishlist-list">
-                            {currentProducts
+                            {products
                                 .filter(product => product.type === "laptops")
                                 .map(product => (
                                     <div className="product-item" key={product.id}>
