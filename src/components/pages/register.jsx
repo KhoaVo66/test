@@ -20,8 +20,8 @@ export default function Register() {
         email,
         password,
       })
-      .then((result) => {
-        console.log(result);
+      .then(() => {
+        // console.log(result);
         alert('Đăng ký thành công');
         navigate("/login");
       })
