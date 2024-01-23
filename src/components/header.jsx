@@ -20,7 +20,7 @@ export default function Header() {
 
     useEffect(()=>{
         const token = JSON.parse(localStorage.getItem("token"));
-        axios.get('https://web-shopping.onrender.com/user/' + token)
+        axios.get('https://web-shopping-exclusive.onrender.com/user/' + token)
         .then(result => {
             console.log(result.data)
             setId(result.data.id)
