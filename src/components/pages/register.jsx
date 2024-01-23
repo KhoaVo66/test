@@ -21,7 +21,7 @@ export default function Register() {
         password,
       })
       .then((result) => {
-        console.log(result.status)
+        // console.log(result.status)
         if(result.status === 201){
           alert('Email đã tồn tại')
         }else{
