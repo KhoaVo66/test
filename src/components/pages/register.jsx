@@ -20,7 +20,7 @@ export default function Register() {
         email,
         password,
       })
-      .then(result => {
+      .then((result) => {
         if(result.status === 401){
           alert('Email đã tồn tại')
         }else{
