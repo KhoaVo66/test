@@ -116,7 +116,7 @@ export default function Header() {
                                 to="/contact"
                                 className={`sidebar-item ${activeNavItem === 'contact' ? 'active' : ''}`}
                                 onClick={() => handleNavItemClick('contact')}
-                                style={{display: isAdmin? "" :  "none"}}
+                                style={{display: isAdmin && user ? "" :  "none"}}
                             >
                                 Contact
                             </NavLink>
@@ -124,7 +124,7 @@ export default function Header() {
                                 to="/about"
                                 className={`sidebar-item ${activeNavItem === 'about' ? 'active' : ''}`}
                                 onClick={() => handleNavItemClick('about')}
-                                style={{display: isAdmin? "" :  "none"}}
+                                style={{display: isAdmin && user ? "" :  "none"}}
                             >
                                 About
                             </NavLink>
