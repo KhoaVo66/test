@@ -20,7 +20,7 @@ export default function Header() {
 
     useEffect(()=>{
         const token = JSON.parse(localStorage.getItem("token"));
-        axios.get('https://web-shopping-exclusive.onrender.com/user/' + token)
+        axios.get('https://web-shopping.onrender.com/user/' + token)
         .then(result => {
             console.log(result.data)
             setId(result.data.id)
@@ -116,7 +116,6 @@ export default function Header() {
                                 to="/contact"
                                 className={`sidebar-item ${activeNavItem === 'contact' ? 'active' : ''}`}
                                 onClick={() => handleNavItemClick('contact')}
-                                style={{display: isAdmin && user ? "" :  "none"}}
                             >
                                 Contact
                             </NavLink>
@@ -124,7 +123,6 @@ export default function Header() {
                                 to="/about"
                                 className={`sidebar-item ${activeNavItem === 'about' ? 'active' : ''}`}
                                 onClick={() => handleNavItemClick('about')}
-                                style={{display: isAdmin && user ? "" :  "none"}}
                             >
                                 About
                             </NavLink>
