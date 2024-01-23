@@ -2,14 +2,15 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react"
 import axios from "axios";
 export default function Contact() {
-    const [email, setEmail] = useState()
-    const [name, setName] = useState()
-    const [phone, setPhone] = useState()
-    const [message, setMessage] = useState()
+    const [email, setEmail] = useState('')
+    const [name, setName] = useState('')
+    const [phone, setPhone] = useState('')
+    const [message, setMessage] = useState('')
+ 
 
     useEffect(()=>{
         const token = JSON.parse(localStorage.getItem("token"));
-        axios.get('https://web-shopping.onrender.com/user/' + token)
+        axios.get('https://web-shopping-exclusive.onrender.com/user/' + token)
         .then(result => {
             console.log(result.data)
             setEmail(result.data.email)
@@ -18,12 +19,13 @@ export default function Contact() {
         .catch(err => console.log(err))
     },[])
 
-    const Submit = () => {
-        axios.post('https://web-shopping.onrender.com/Createfeedback',{email, name, phone, message})
-        .then((result) => {
-            console.log(result)
-            alert('Feedback thành công')
+    const Submit = (e) => {
+        e.preventDefault();
+        axios.post('https://web-shopping-exclusive.onrender.com/Createfeedback',{email, name, phone, message})
+        .then(() => {
+            alert('feedback thành công')
             window.location.reload()
+            // console.log(result)
         })
         .catch(err => console.log(err))
     }
@@ -74,7 +76,6 @@ export default function Contact() {
                                 <input
                                     className="contact-input"
                                     type="text"
-                                    name=""
                                     placeholder="Your Email *"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
@@ -82,7 +83,6 @@ export default function Contact() {
                                 <input
                                     className="contact-input"
                                     type="text"
-                                    name=""
                                     placeholder="Your Phone *"
                                     value={phone}
                                     onChange={(e) => setPhone(e.target.value)}
@@ -90,7 +90,6 @@ export default function Contact() {
                             </div>
                             <textarea
                                 className="contact-textarea"
-                                name=""
                                 cols={30}
                                 rows={10}
                                 placeholder="Your Massage"

@@ -10,7 +10,7 @@ export default function Smart() {
     // const [productsPerPage] = useState(12);
 
     useEffect(() => {
-        axios.get('https://web-shopping.onrender.com/products')
+        axios.get('https://web-shopping-exclusive.onrender.com/products')
             .then(response => setProducts(response.data))
             .catch(err => console.log(err))
     }, []);

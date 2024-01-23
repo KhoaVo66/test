@@ -12,7 +12,7 @@ export default function Login() {
   const Submit = (e) => {
     e.preventDefault();
     axios
-      .post("https://web-shopping.onrender.com/login", { email, password })
+      .post("https://web-shopping-exclusive.onrender.com/login", { email, password })
       .then((result) => {
         console.log(result)
         if (result.status === 200) {

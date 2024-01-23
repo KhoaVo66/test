@@ -17,7 +17,7 @@ export default function EditProduct() {
 
   useEffect(() => {
     axios
-      .get("https://web-shopping.onrender.com/products/" + id)
+      .get("https://web-shopping-exclusive.onrender.com/products/" + id)
       .then((result) => {
         console.log(result);
         setProductName(result.data.product_name);
@@ -37,7 +37,7 @@ export default function EditProduct() {
     e.preventDefault();
     // console.log(promotionType)
     axios
-      .put("https://web-shopping.onrender.com/products/" + id, {
+      .put("https://web-shopping-exclusive.onrender.com/products/" + id, {
         productName, image, productType, description, price, sales, promotionType, storageAddress, stock
       })
       .then((result) => {

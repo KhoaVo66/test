@@ -18,7 +18,7 @@ function Profile() {
 
   useEffect(() => {
     axios
-      .get("https://web-shopping.onrender.com/getUser/" + id)
+      .get("https://web-shopping-exclusive.onrender.com/getUser/" + id)
       .then((result) => {
         // console.log(result)
         setFirstName(result.data.firstName);
@@ -33,7 +33,7 @@ function Profile() {
   const Update = (e) => {
     e.preventDefault();
     axios
-      .put("https://web-shopping.onrender.com/updateUser/" + id, {
+      .put("https://web-shopping-exclusive.onrender.com/updateUser/" + id, {
         firstName,
         lastName,
         email,
