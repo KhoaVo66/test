@@ -2,22 +2,35 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react"
 import axios from "axios";
 export default function Contact() {
-    const [email, setEmail] = useState('')
-    const [name, setName] = useState('')
-    const [phone, setPhone] = useState('')
-    const [message, setMessage] = useState('')
+    const [email, setEmail] = useState()
+    const [name, setName] = useState()
+    const [phone, setPhone] = useState()
+    const [message, setMessage] = useState()
+    const [id , setId] = useState()
  
 
     useEffect(()=>{
         const token = JSON.parse(localStorage.getItem("token"));
         axios.get('https://web-shopping-exclusive.onrender.com/user/' + token)
         .then(result => {
-            console.log(result.data)
-            setEmail(result.data.email)
-            setName(`${result.data.firstName} ${result.data.lastName}`)
+            // console.log(result.data)
+            setId(result.data.id)
         })
         .catch(err => console.log(err))
     },[])
+
+    useEffect(() => {
+        axios
+          .get("https://web-shopping-exclusive.onrender.com/getUser/" + id)
+          .then((result) => {
+            // console.log(result)
+            setEmail(result.data.email)
+            setName(`${result.data.firstName} ${result.data.lastName}`)
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }, [id]);
 
     const Submit = (e) => {
         e.preventDefault();
