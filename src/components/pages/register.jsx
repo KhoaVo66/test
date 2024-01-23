@@ -20,10 +20,14 @@ export default function Register() {
         email,
         password,
       })
-      .then(() => {
+      .then(result => {
+        if(result.status === 401){
+          alert('Email đã tồn tại')
+        }else{
+          alert('Đăng ký thành công');
+          navigate("/login");
+        }
         // console.log(result);
-        alert('Đăng ký thành công');
-        navigate("/login");
       })
       .catch((err) => console.log(err));
   };
