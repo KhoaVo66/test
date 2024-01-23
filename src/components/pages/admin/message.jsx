@@ -9,10 +9,10 @@ const Message = () => {
     axios
       .get("https://web-shopping-exclusive.onrender.com/feedback")
       .then((result) => {
-        setData(result);
+        setData(result.data);
       })
       .catch((err) => console.log(err));
-  });
+  },[]);
 
   return (
     <div className="container">
