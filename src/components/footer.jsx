@@ -1,5 +1,5 @@
-import frameImg from '../assets/image/frame.png'
-import { Link } from 'react-router-dom';
+import frameImg from "../assets/image/frame.png";
+import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <>
@@ -7,7 +7,7 @@ export default function Footer() {
         <section className="container footer-top">
           <div className="footer-top__item">
             <Link to="./index.html" className="logo">
-              Exclusive
+              電気物
             </Link>
             <p>Get 10% off your first order</p>
             <div className="footer-submit">
@@ -55,7 +55,9 @@ export default function Footer() {
             </ul>
           </div>
         </section>
-        <div className="footer-below">© Copyright Rimel 2023. All right reserved</div>
+        <div className="footer-below">
+          © Copyright Rimel 2023. All right reserved
+        </div>
       </footer>
     </>
   );
