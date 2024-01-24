@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import {Link, NavLink } from "react-router-dom";
 import axios from 'axios';
-
+import { useCartContext } from "../useCartContext";
 export default function Header() {
+    const { cartProduct } = useCartContext();
     const [isMdAccountVisible, setIsMdAccountVisible] = useState(false);
     const [activeNavItem, setActiveNavItem] = useState(null);
     const accountButtonRef = useRef(null);
@@ -199,7 +200,7 @@ export default function Header() {
                                 <div className="tools-item">
                                     <i className="bx bx-cart-alt" />
                                     <span className="number-icon" id="cart-number">
-                                        0
+                                    {cartProduct.length}
                                     </span>
                                 </div>
                             </Link>

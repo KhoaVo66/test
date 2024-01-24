@@ -5,9 +5,9 @@ import HeroSlide from '../script_handle/index_scripts/hero_slide';
 import MonthList from '../script_handle/index_scripts/get_month';
 import OurProducts from '../script_handle/index_scripts/our_products';
 import feature1 from "../../assets/image/featured-1.png"
-import feature2 from "../../assets/image/featured-2.png"
 import feature3 from "../../assets/image/featured-3.png"
-import feature4 from "../../assets/image/featured-4.png"
+import nitendo from "../../assets/image/NintendoSwitch.png"
+import vr from "../../assets/image/VR.png"
 import deliveryImg from "../../assets/image/icon-delivery.png"
 import customImg from "../../assets/image/Icon-customer_service.png"
 import secureImg from "../../assets/image/Icon-secure.png"
@@ -137,13 +137,13 @@ class Home extends Component {
                 <div className="featured-right">
                   <div className="featured-item">
                     <img
-                      src={feature2}
+                      src={nitendo}
                       alt=""
                       className="featured-img"
                     />
                     <div className="featured-text">
-                      <h2>Women's Collections</h2>
-                      <p>Featured woman collections that give you another vibe.</p>
+                      <h2>NINTENDO's Collections</h2>
+                      <p>Anytime, Anywhere, with anyone</p>
                       <Link to="#">Shop Now</Link>
                     </div>
                   </div>
@@ -162,13 +162,13 @@ class Home extends Component {
                     </div>
                     <div className="featured-vid">
                       <img
-                        src={feature4}
+                        src={vr}
                         alt=""
                         className="featured-img"
                       />
                       <div className="featured-text">
-                        <h2>Perfume</h2>
-                        <p>GUCCI INTENSE OUD EDP</p>
+                        <h2>VR</h2>
+                        <p>Virtual world real reaction</p>
                         <Link to="#">Shop Now</Link>
                       </div>
                     </div>

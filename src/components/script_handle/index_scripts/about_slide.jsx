@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import 'swiper/css';
 import { Link } from 'react-router-dom';
+import admin from '../../../assets/image/user-1.png'
 
 const ProfileSlide = () => {
     useEffect(() => {
@@ -35,7 +36,7 @@ const ProfileSlide = () => {
                 <div className="swiper-slide story-slide__item">
                     <div className="story-slide__box">
                         <div className="story-slide__img">
-                            <img src="./assets/images/user-1.png" alt="img" />
+                            <img src={admin} alt="img" />
                         </div>
                         <h2>Tom Cruise</h2>
                         <p>Founder &amp; Chairman</p>
@@ -59,7 +60,7 @@ const ProfileSlide = () => {
                     </div>
                     <div className="story-slide__box">
                         <div className="story-slide__img">
-                            <img src="./assets/images/user-1.png" alt="img" />
+                            <img src={admin} alt="img" />
                         </div>
                         <h2>Tom Cruise</h2>
                         <p>Founder &amp; Chairman</p>
@@ -83,81 +84,7 @@ const ProfileSlide = () => {
                     </div>
                     <div className="story-slide__box">
                         <div className="story-slide__img">
-                            <img src="./assets/images/user-1.png" alt="img" />
-                        </div>
-                        <h2>Tom Cruise</h2>
-                        <p>Founder &amp; Chairman</p>
-                        <ul>
-                            <li>
-                                <Link to="#">
-                                    <i className="bx bxl-twitter" />
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="#">
-                                    <i className="bx bxl-instagram" />
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="#">
-                                    <i className="bx bxl-linkedin" />
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div className="swiper-slide story-slide__item">
-                    <div className="story-slide__box">
-                        <div className="story-slide__img">
-                            <img src="./assets/images/user-1.png" alt="img" />
-                        </div>
-                        <h2>Tom Cruise</h2>
-                        <p>Founder &amp; Chairman</p>
-                        <ul>
-                            <li>
-                                <Link to="#">
-                                    <i className="bx bxl-twitter" />
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="#">
-                                    <i className="bx bxl-instagram" />
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="#">
-                                    <i className="bx bxl-linkedin" />
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className="story-slide__box">
-                        <div className="story-slide__img">
-                            <img src="./assets/images/user-1.png" alt="img" />
-                        </div>
-                        <h2>Tom Cruise</h2>
-                        <p>Founder &amp; Chairman</p>
-                        <ul>
-                            <li>
-                                <Link to="#">
-                                    <i className="bx bxl-twitter" />
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="#">
-                                    <i className="bx bxl-instagram" />
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="#">
-                                    <i className="bx bxl-linkedin" />
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className="story-slide__box">
-                        <div className="story-slide__img">
-                            <img src="./assets/images/user-1.png" alt="img" />
+                            <img src={admin} alt="img" />
                         </div>
                         <h2>Tom Cruise</h2>
                         <p>Founder &amp; Chairman</p>
@@ -183,7 +110,7 @@ const ProfileSlide = () => {
                 <div className="swiper-slide story-slide__item">
                     <div className="story-slide__box">
                         <div className="story-slide__img">
-                            <img src="./assets/images/user-1.png" alt="img" />
+                            <img src={admin} alt="img" />
                         </div>
                         <h2>Tom Cruise</h2>
                         <p>Founder &amp; Chairman</p>
@@ -207,7 +134,7 @@ const ProfileSlide = () => {
                     </div>
                     <div className="story-slide__box">
                         <div className="story-slide__img">
-                            <img src="./assets/images/user-1.png" alt="img" />
+                            <img src={admin} alt="img" />
                         </div>
                         <h2>Tom Cruise</h2>
                         <p>Founder &amp; Chairman</p>
@@ -231,7 +158,81 @@ const ProfileSlide = () => {
                     </div>
                     <div className="story-slide__box">
                         <div className="story-slide__img">
-                            <img src="./assets/images/user-1.png" alt="img" />
+                            <img src={admin} alt="img" />
+                        </div>
+                        <h2>Tom Cruise</h2>
+                        <p>Founder &amp; Chairman</p>
+                        <ul>
+                            <li>
+                                <Link to="#">
+                                    <i className="bx bxl-twitter" />
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="#">
+                                    <i className="bx bxl-instagram" />
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="#">
+                                    <i className="bx bxl-linkedin" />
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="swiper-slide story-slide__item">
+                    <div className="story-slide__box">
+                        <div className="story-slide__img">
+                            <img src={admin} alt="img" />
+                        </div>
+                        <h2>Tom Cruise</h2>
+                        <p>Founder &amp; Chairman</p>
+                        <ul>
+                            <li>
+                                <Link to="#">
+                                    <i className="bx bxl-twitter" />
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="#">
+                                    <i className="bx bxl-instagram" />
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="#">
+                                    <i className="bx bxl-linkedin" />
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="story-slide__box">
+                        <div className="story-slide__img">
+                            <img src={admin} alt="img" />
+                        </div>
+                        <h2>Tom Cruise</h2>
+                        <p>Founder &amp; Chairman</p>
+                        <ul>
+                            <li>
+                                <Link to="#">
+                                    <i className="bx bxl-twitter" />
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="#">
+                                    <i className="bx bxl-instagram" />
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="#">
+                                    <i className="bx bxl-linkedin" />
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="story-slide__box">
+                        <div className="story-slide__img">
+                            <img src={admin} alt="img" />
                         </div>
                         <h2>Tom Cruise</h2>
                         <p>Founder &amp; Chairman</p>
