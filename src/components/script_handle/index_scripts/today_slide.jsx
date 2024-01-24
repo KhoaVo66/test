@@ -14,6 +14,7 @@ const ToDaySlide = () => {
 
     script.addEventListener('load', () => {
       const swiper = new window.Swiper(".todays-slide", {
+        loop: true,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
